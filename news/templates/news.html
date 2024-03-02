@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container-fluid">
+    {% for news in newss %}
+    <div class="card mb-3 w-100" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{news.headline}}</h5>
+          <p class="card-text">{{news.body}}</p>
+          <p class="card-text"><small class="text-muted">{{news.date}}</small></p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}
